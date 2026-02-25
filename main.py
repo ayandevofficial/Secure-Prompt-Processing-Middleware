@@ -3,7 +3,7 @@ from pydantic import BaseModel
 from typing import Dict
 from presidio_analyzer import AnalyzerEngine
 from presidio_anonymizer import AnonymizerEngine
-app = FastAPI(title="Sentinel Privacy Middleware")
+app = FastAPI(title="Secure Prompt Processing Middleware")
 analyzer = AnalyzerEngine()
 anonymizer = AnonymizerEngine()
 class AnonymizeRequest(BaseModel):
@@ -36,4 +36,5 @@ async def deanonymize_text(request: DeanonymizeRequest):
     final_text = request.ai_response
     for placeholder, real_data in request.mapping.items():
         final_text = final_text.replace(placeholder, real_data)
+
     return {"real_human_text": final_text}
