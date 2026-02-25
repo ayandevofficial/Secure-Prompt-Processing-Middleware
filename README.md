@@ -1,4 +1,4 @@
-# Sentinel Privacy Middleware
+# Secure Prompt Processing Middleware
 
 A lightweight FastAPI service that detects and anonymizes sensitive user data before sending prompts to Large Language Models (LLMs), and safely restores them in the final response.
 
