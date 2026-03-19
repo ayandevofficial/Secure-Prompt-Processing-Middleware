@@ -26,7 +26,7 @@ async def anonymize_text(request: AnonymizeRequest):
         mapping[placeholder] = original_val
     
     anonymized_result = anonymizer.anonymize(text=request.text, analyzer_results=results)
-    return {
+    return{
         "clean_text": anonymized_result.text,
         "mapping": mapping
     }
