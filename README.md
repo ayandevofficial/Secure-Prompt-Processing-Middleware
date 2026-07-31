@@ -4,7 +4,7 @@ A lightweight FastAPI service that detects and anonymizes sensitive user data be
 
 ## Key Features
 - PII detection using Microsoft Presidio
-- Anonymization of pii
+- Anonymization of pii 
 - Context-preserving masking
 - REST API-based design for easy integration
 
